@@ -1,10 +1,12 @@
 {
   "name": "js-generate-password",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": false,
   "description": "Password Generator for using in javascirpt/typscript based projects.",
   "main": "index.js",
   "bin": "index.js",
+  "exports": "./index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +18,9 @@
     "js password generator",
     "generate password",
     "password generator",
-    "random password",
+    "random password generator",
+    "simple password generator",
+    "easy password generator",
     "password",
     "generator",
     "unique",

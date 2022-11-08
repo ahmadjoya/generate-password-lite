@@ -25,8 +25,8 @@ or
 For the password to be generated, **parameters** are able to pass as an optional **options** object.
 
 ```javascript
-import PasswordGenerator from "js-generate-password";
-const password = PasswordGenerator({
+import GeneratePassword from "js-generate-password";
+const password = GeneratePassword({
   length: 14,
   symbols: true,
 });
@@ -74,8 +74,8 @@ Any of these can be passed into the options object for each function.
 - **No Options passed.**
 
 ```javscript
-const PasswordGenerator = require("js-generate-password");
-const password = PasswordGenerator();
+const GeneratePassword = require("js-generate-password");
+const password = GeneratePassword();
 console.log(password);
 ```
 
@@ -91,7 +91,7 @@ xDU6izb3PV;
 options={
       length : 25;
       }
-password = PasswordGenerator(options);
+password = GeneratePassword(options);
 console.log(password);
 ```
 
@@ -107,7 +107,7 @@ U4c3KpQP5UrbZgTcrqMgFeI3R;
 options={
       exclude : 'abc567XYZ';
       }
-password = PasswordGenerator(options);
+password = GeneratePassword(options);
 console.log(password);
 ```
 
