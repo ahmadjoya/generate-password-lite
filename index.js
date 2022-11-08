@@ -13,4 +13,4 @@ function GeneratePassword(options) {
 }
 
 exports.default = GeneratePassword;
-// module.exports = GeneratePassword;
+module.exports = GeneratePassword;

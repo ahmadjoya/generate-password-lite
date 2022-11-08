@@ -3,7 +3,7 @@
 
 # js-generate-password
 
-js-generate-password is usable for every javascript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
+js-generate-password is usable for every javascript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
 
 The characters that may be choosen from are
 
