@@ -1,7 +1,7 @@
-import { generatePswd } from "../lib/password-generator";
-import { checkError } from "../lib/check-options-error";
-import { processOption } from "../lib/process-options";
-import { GenerateOptions } from "../lib/types";
+import { generatePswd } from "./lib/password-generator";
+import { checkError } from "./lib/check-options-error";
+import { processOption } from "./lib/process-options";
+import { GenerateOptions } from "./lib/types";
 
 function GeneratePassword(options?: GenerateOptions) {
   let pswd;
@@ -34,6 +34,6 @@ function GeneratePassword(options?: GenerateOptions) {
   }
 }
 
-// console.log(GeneratePassword({ minLengthLowercase: 4 }));
+console.log(GeneratePassword({ minLengthLowercase: 4 }));
 export { GeneratePassword };
 export default { GeneratePassword };

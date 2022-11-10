@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generatePassword = void 0;
+exports.generatePswd = void 0;
 // const generategenerateRandomNumberss = require("./generate-random-number");
 // const shuffleString = require("./shuffle-string");
 const generate_random_number_1 = require("./generate-random-number");
 const shuffle_string_1 = require("./shuffle-string");
-const generatePassword = (options) => {
+const generatePswd = (options) => {
     let pswd = "";
     let minChar = "";
     let { length, lowercase, uppercase, numbers, symbols, minLengthLowercase, minLengthUppercase, minLengthNumbers, minLengthSymbols, exclude, } = options;
@@ -54,7 +54,7 @@ const generatePassword = (options) => {
     }
     return pswd;
 };
-exports.generatePassword = generatePassword;
+exports.generatePswd = generatePswd;
 const removeExceptions = (str, EXCEPTIONS) => {
     EXCEPTIONS === null || EXCEPTIONS === void 0 ? void 0 : EXCEPTIONS.split("").forEach((char) => {
         str = str.replace(char, "");
