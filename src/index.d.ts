@@ -1,4 +1,4 @@
-interface GenerateOptions {
+export interface GenerateOptions {
   /**
    * lenght of the password
    * @default 10
