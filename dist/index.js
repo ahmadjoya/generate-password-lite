@@ -1,17 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GeneratePassword = void 0;
-const password_generator_1 = require("../lib/password-generator");
-const check_options_error_1 = require("../lib/check-options-error");
-const process_options_1 = require("../lib/process-options");
-// const errorCheck = require("../../lib/check-options-error");
-// const processOptions = require("../../lib/process-options");
+const password_generator_1 = require("./lib/password-generator");
+const check_options_error_1 = require("./lib/check-options-error");
+const process_options_1 = require("./lib/process-options");
 function GeneratePassword(options) {
     let pswd;
     if (options) {
         options = (0, process_options_1.processOption)(options);
         (0, check_options_error_1.checkError)(options);
-        pswd = (0, password_generator_1.generatePassword)(options);
+        pswd = (0, password_generator_1.generatePswd)(options);
         return pswd;
     }
     else {
@@ -29,9 +27,10 @@ function GeneratePassword(options) {
         };
         options = (0, process_options_1.processOption)(opt);
         (0, check_options_error_1.checkError)(options);
-        pswd = (0, password_generator_1.generatePassword)(options);
+        pswd = (0, password_generator_1.generatePswd)(options);
         return pswd;
     }
 }
 exports.GeneratePassword = GeneratePassword;
+console.log(GeneratePassword({ minLengthLowercase: 4 }));
 exports.default = { GeneratePassword };
