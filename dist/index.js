@@ -32,5 +32,4 @@ function GeneratePassword(options) {
     }
 }
 exports.GeneratePassword = GeneratePassword;
-console.log(GeneratePassword({ minLengthLowercase: 4 }));
 exports.default = { GeneratePassword };

@@ -34,6 +34,6 @@ function GeneratePassword(options?: GenerateOptions) {
   }
 }
 
-console.log(GeneratePassword({ minLengthLowercase: 4 }));
+// console.log(GeneratePassword({ minLengthLowercase: 4 }));
 export { GeneratePassword };
 export default { GeneratePassword };
