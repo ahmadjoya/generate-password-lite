@@ -5,6 +5,7 @@
   "description": "Password Generator for using in javascirpt/typscript based projects.",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
+  "types": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
