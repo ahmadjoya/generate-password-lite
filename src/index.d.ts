@@ -55,4 +55,4 @@ declare namespace GeneratePassword {}
 
 declare function GeneratePassword(options?: GenerateOptions): string;
 
-export default GeneratePassword;
+export { GeneratePassword };
