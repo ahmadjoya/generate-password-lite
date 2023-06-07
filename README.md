@@ -13,11 +13,52 @@ The characters that may be choosen from are
 - Symbols
 
 The user may also specify the minimum number of character for each type.
+<br />
+<br />
 
+<p align ="center">
+  <a href="https://nodei.co/npm/js-generate-password" target="_blank">
+    <img src="https://nodei.co/npm/js-generate-password.png" alt="npm Info" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="http://npm.im/js-generate-password" target="_blank">
+    <img src="https://img.shields.io/npm/v/js-generate-password.svg" alt="npm Version" />
+  </a>
+  <a href="http://npm.im/js-generate-password" target="_blank">
+    <img src="https://img.shields.io/github/v/release/ahmadjoya/js-generate-password" alt="npm Release Version" />
+  </a>
+  <a href="http://npm.im/js-generate-password" target="_blank">
+    <img src="https://img.shields.io/npm/dm/js-generate-password.svg" alt="npm Downloads" />
+  </a>
+  <a href="http://npm.im/js-generate-password" target="_blank">
+    <img src="https://img.shields.io/npm/l/js-generate-password.svg" alt="npm Package License" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ahmadjoya/js-generate-password/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/ahmadjoya/js-generate-password" alt="github Stars" />
+  </a>
+  <a href="https://github.com/ahmadjoya/js-generate-password/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/ahmadjoya/js-generate-password" alt="github Forks" />
+  </a>
+  <a href="https://github.com/ahmadjoya/js-generate-password/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/contributors/ahmadjoya/js-generate-password" alt="github Contributors" />
+  </a>
+  <a href="https://github.com/ahmadjoya/js-generate-password/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/ahmadjoya/js-generate-password" alt="github Issues" />
+  </a>
+</p>
+
+<br />
 ## Installation
 
 `npm install js-generate-password`
+
 or
+
 `yarn add js-generate-password`
 
 ## Usage

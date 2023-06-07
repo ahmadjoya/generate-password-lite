@@ -1,8 +1,9 @@
 {
   "name": "js-generate-password",
-  "version": "0.0.3",
+  "version": "0.1.8",
   "private": false,
   "description": "Password Generator for using in javascirpt/typscript based projects.",
+  "Author": "Ahmad Joya <joya.abn@gmail.com>",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
   "types": "./src/index.d.ts",
@@ -14,8 +15,9 @@
     "url": "git+https://github.com/ahmadjoya/js-generate-password.git"
   },
   "keywords": [
-    "js password generator",
     "generate password",
+    "js-generate-password",
+    "password generator",
     "password generator",
     "random password generator",
     "simple password generator",
@@ -29,7 +31,6 @@
     "reactjs",
     "random"
   ],
-  "author": "Ahmad Joya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ahmadjoya/js-generate-password/issues"
