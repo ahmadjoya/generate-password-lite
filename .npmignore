@@ -1,0 +1,14 @@
+src
+demo
+docs
+.tsconfig
+.gitignore
+.git
+*.png
+*.config.js
+tsconfig.json
+rollup.config.mjs
+.eslintrc.js
+.prettierrc
+.editorconfig
+.babelrc

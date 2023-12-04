@@ -1,14 +1,11 @@
 {
   "name": "js-generate-password",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
-  "description": "Password Generator for using in javascirpt/typscript based projects.",
+  "description": "Password Generator for using in javascript/typescript based projects.",
   "Author": "Ahmad Joya <joya.abn@gmail.com>",
-  "main": "./dist/index.js",
-  "bin": "./dist/index.js",
-  "types": "./src/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -35,5 +32,20 @@
   "bugs": {
     "url": "https://github.com/ahmadjoya/js-generate-password/issues"
   },
-  "homepage": "https://github.com/ahmadjoya/js-generate-password#readme"
+  "homepage": "https://github.com/ahmadjoya/js-generate-password#readme",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": "./dist/index.js",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.6.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.36.0"
+  }
 }
