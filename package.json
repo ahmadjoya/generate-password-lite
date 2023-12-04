@@ -1,6 +1,6 @@
 {
   "name": "js-generate-password",
-  "version": "0.1.10",
+  "version": "1.0.0",
   "private": false,
   "description": "Password Generator for using in javascript/typescript based projects.",
   "Author": "Ahmad Joya <joya.abn@gmail.com>",
