@@ -115,15 +115,17 @@ Any of these can be passed into the options object for each function.
 | minLengthNumbers   | only if **numbers** is set to **true**, minLengthNumbers will create a password that will have minimum number of numbers in the password.                   | 1             |
 | minLengthSymbols   | only if **symbols** is set to **true**, minLengthSymbols will create a password that will have minimum number of symbols in the password.                   | 1             |
 
-\*At least one should be true.
+* At least one should be true.
 
 ## Example
 
 - **No Options passed.**
 
 ```typescript
-const {GeneratePassword} = require("js-generate-password");
+const { GeneratePassword } = "js-generate-password";
+
 const password = GeneratePassword();
+
 console.log(password);
 ```
 
@@ -149,10 +151,12 @@ U4c3KpQP5UrbZgTcrqMgFeI3R;
 - **exclude parameter passed.**
 
 ```typescript
-options={
-      exclude : 'abc567XYZ';
-      }
+options = {
+  exclude : 'abc567XYZ';
+}
+
 password = GeneratePassword(options);
+
 console.log(password);
 ```
 
@@ -161,3 +165,8 @@ The generated password wouldn't has none of 'abc567XYZ' characters
 ```typescript
 J9yCfttQNj;
 ```
+
+
+## License
+
+js-generate-password is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadjoya/js-generate-password#readme) file for more details.
