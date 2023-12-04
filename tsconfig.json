@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "es5",  
+    "module": "es2015",                     
+    "lib": ["es2017", "es7", "es6", "es5", "dom"],   
+    "allowJs": false,                   
+    "declaration": true,                  
+    "sourceMap": true,                     
+    "outDir": "./dist",              
+    "rootDir": "src",                  
+    "noEmit": true,                      
+    "strict": true,                          
+    "strictNullChecks": true,
+    "noUnusedLocals": true,               
+    "noUnusedParameters": true,           
+    "noImplicitReturns": true,             
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}
+
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "module": "ES2015",  // <-- Change this line
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "moduleResolution": "node",
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "declaration": true,
+//     "declarationDir": "./dist/types",
+//   },
+//   "include": ["src/**/*.ts"],
+//   "exclude": ["node_modules", "dist", "build"],
+// }
+
+// {
+//   "compilerOptions": {
+//     "target": "es2016",                                 
+//     "module": "commonjs",                              
+//     "esModuleInterop": true,                           
+//     "forceConsistentCasingInFileNames": true,            
+//     "strict": true,                                    
+//     "skipLibCheck": true,
+//     "outDir": "./dist",   
+//     "declaration": true           
+//   },
+//   "include": ["src/**/*.ts"],
+//   "exclude": ["node_modules"]
+// }

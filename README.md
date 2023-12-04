@@ -43,7 +43,7 @@
 
 # js-generate-password
 
-js-generate-password is usable for every javascript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
+js-generate-password is usable for every typescript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
 
 The characters that may be choosen from are
 
@@ -56,28 +56,34 @@ The user may also specify the minimum number of character for each type.
 
 ## Installation
 
-`npm install js-generate-password`
+```bash
+npm install js-generate-password
+```
 
 or
 
-`yarn add js-generate-password`
+```bash 
+yarn add js-generate-password
+```
 
 ## Usage
 
 For the password to be generated, **parameters** are able to pass as an optional **options** object.
 
-```javascript
+```typescript
 import { GeneratePassword } from "js-generate-password";
+
 const password = GeneratePassword({
   length: 14,
   symbols: true,
 });
+
 console.log(password);
 ```
 
 If no parameter is passed, the default parameter will be taken as :
 
-```javascript
+```typescript
 options = {
   length: 10,
   lowercase: true,
@@ -109,49 +115,58 @@ Any of these can be passed into the options object for each function.
 | minLengthNumbers   | only if **numbers** is set to **true**, minLengthNumbers will create a password that will have minimum number of numbers in the password.                   | 1             |
 | minLengthSymbols   | only if **symbols** is set to **true**, minLengthSymbols will create a password that will have minimum number of symbols in the password.                   | 1             |
 
-\*At least one should be true.
+* At least one should be true.
 
 ## Example
 
 - **No Options passed.**
 
-```javscript
-const {GeneratePassword} = require("js-generate-password");
+```typescript
+const { GeneratePassword } = "js-generate-password";
+
 const password = GeneratePassword();
+
 console.log(password);
 ```
 
 In the above case, no parameter is passed as option. Therefore the default values will be taken - which will have alphabets, both upper and lower case, numbers, and will be of length 10 characters.
 
-```javascript
+```typescript
 xDU6izb3PV;
 ```
 
 - **Length parameter passed.**
 
-```javascript
+```typescript
 const password = GeneratePassword({ length: 25 });
 console.log(password);
 ```
 
 The password generated is like this
 
-```javascript
+```typescript
 U4c3KpQP5UrbZgTcrqMgFeI3R;
 ```
 
 - **exclude parameter passed.**
 
-```javascript
-options={
-      exclude : 'abc567XYZ';
-      }
+```typescript
+options = {
+  exclude : 'abc567XYZ';
+}
+
 password = GeneratePassword(options);
+
 console.log(password);
 ```
 
 The generated password wouldn't has none of 'abc567XYZ' characters
 
-```javascript
+```typescript
 J9yCfttQNj;
 ```
+
+
+## License
+
+js-generate-password is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadjoya/js-generate-password#readme) file for more details.

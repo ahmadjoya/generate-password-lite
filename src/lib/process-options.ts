@@ -1,61 +1,61 @@
-import { GenerateOptions } from "./types";
+import { GenerateOptions } from '../types'
 
 export const processOption = (options: GenerateOptions) => {
   {
-    options.length = typeof options.length == "undefined" ? 10 : options.length;
+    options.length = typeof options.length == 'undefined' ? 10 : options.length
 
     options.lowercase =
-      typeof options.lowercase == "undefined" ? true : options.lowercase;
+      typeof options.lowercase == 'undefined' ? true : options.lowercase
 
     options.uppercase =
-      typeof options.uppercase == "undefined" ? true : options.uppercase;
+      typeof options.uppercase == 'undefined' ? true : options.uppercase
 
     options.numbers =
-      typeof options.numbers == "undefined" ? true : options.numbers;
+      typeof options.numbers == 'undefined' ? true : options.numbers
 
     options.symbols =
-      typeof options.symbols == "undefined" ? false : options.symbols;
+      typeof options.symbols == 'undefined' ? false : options.symbols
 
     if (options.lowercase) {
       options.minLengthLowercase =
-        typeof options.minLengthLowercase == "undefined"
+        typeof options.minLengthLowercase == 'undefined'
           ? 1
-          : options.minLengthLowercase;
+          : options.minLengthLowercase
     } else {
-      options.minLengthLowercase = 0;
+      options.minLengthLowercase = 0
     }
 
     if (options.uppercase) {
       options.minLengthUppercase =
-        typeof options.minLengthUppercase == "undefined"
+        typeof options.minLengthUppercase == 'undefined'
           ? 1
-          : options.minLengthUppercase;
+          : options.minLengthUppercase
     } else {
-      options.minLengthUppercase = 0;
+      options.minLengthUppercase = 0
     }
 
     if (options.numbers) {
       options.minLengthNumbers =
-        typeof options.minLengthNumbers == "undefined"
+        typeof options.minLengthNumbers == 'undefined'
           ? 1
-          : options.minLengthNumbers;
+          : options.minLengthNumbers
     } else {
-      options.minLengthNumbers = 0;
+      options.minLengthNumbers = 0
     }
 
     if (options.symbols) {
       options.minLengthSymbols =
-        typeof options.minLengthSymbols == "undefined"
+        typeof options.minLengthSymbols == 'undefined'
           ? 1
-          : options.minLengthSymbols;
+          : options.minLengthSymbols
     } else {
-      options.minLengthSymbols = 0;
+      options.minLengthSymbols = 0
     }
 
     options.exclude =
-      typeof options.exclude == "undefined" ? "" : options.exclude;
+      typeof options.exclude == 'undefined' ? '' : options.exclude
   }
-  return options;
-};
+  return options
+}
 
 // module.exports = processOption;
