@@ -4,46 +4,46 @@
 <br />
 
 <p align ="center">
-  <a href="https://nodei.co/npm/js-generate-password" target="_blank">
-    <img src="https://nodei.co/npm/js-generate-password.png" alt="npm Info" />
+  <a href="https://nodei.co/npm/generate-password-lite" target="_blank">
+    <img src="https://nodei.co/npm/generate-password-lite.png" alt="npm Info" />
   </a>
 </p>
 
 <p align="center">
-  <a href="http://npm.im/js-generate-password" target="_blank">
-    <img src="https://img.shields.io/npm/v/js-generate-password.svg" alt="npm Version" />
+  <a href="http://npm.im/generate-password-lite" target="_blank">
+    <img src="https://img.shields.io/npm/v/generate-password-lite.svg" alt="npm Version" />
   </a>
-  <a href="http://npm.im/js-generate-password" target="_blank">
-    <img src="https://img.shields.io/github/v/release/ahmadjoya/js-generate-password" alt="npm Release Version" />
+  <a href="http://npm.im/generate-password-lite" target="_blank">
+    <img src="https://img.shields.io/github/v/release/ahmadjoya/generate-password-lite" alt="npm Release Version" />
   </a>
-  <a href="http://npm.im/js-generate-password" target="_blank">
-    <img src="https://img.shields.io/npm/dm/js-generate-password.svg" alt="npm Downloads" />
+  <a href="http://npm.im/generate-password-lite" target="_blank">
+    <img src="https://img.shields.io/npm/dm/generate-password-lite.svg" alt="npm Downloads" />
   </a>
-  <a href="http://npm.im/js-generate-password" target="_blank">
-    <img src="https://img.shields.io/npm/l/js-generate-password.svg" alt="npm Package License" />
+  <a href="http://npm.im/generate-password-lite" target="_blank">
+    <img src="https://img.shields.io/npm/l/generate-password-lite.svg" alt="npm Package License" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/ahmadjoya/js-generate-password/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/ahmadjoya/js-generate-password" alt="github Stars" />
+  <a href="https://github.com/ahmadjoya/generate-password-lite/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/ahmadjoya/generate-password-lite" alt="github Stars" />
   </a>
-  <a href="https://github.com/ahmadjoya/js-generate-password/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/ahmadjoya/js-generate-password" alt="github Forks" />
+  <a href="https://github.com/ahmadjoya/generate-password-lite/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/ahmadjoya/generate-password-lite" alt="github Forks" />
   </a>
-  <a href="https://github.com/ahmadjoya/js-generate-password/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/contributors/ahmadjoya/js-generate-password" alt="github Contributors" />
+  <a href="https://github.com/ahmadjoya/generate-password-lite/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/contributors/ahmadjoya/generate-password-lite" alt="github Contributors" />
   </a>
-  <a href="https://github.com/ahmadjoya/js-generate-password/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/ahmadjoya/js-generate-password" alt="github Issues" />
+  <a href="https://github.com/ahmadjoya/generate-password-lite/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/ahmadjoya/generate-password-lite" alt="github Issues" />
   </a>
 </p>
 
 <br />
 
-# js-generate-password
+# generate-password-lite
 
-js-generate-password is usable for every typescript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
+generate-password-lite is usable for every typescript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.
 
 The characters that may be choosen from are
 
@@ -57,13 +57,13 @@ The user may also specify the minimum number of character for each type.
 ## Installation
 
 ```bash
-npm install js-generate-password
+npm install generate-password-lite
 ```
 
 or
 
-```bash 
-yarn add js-generate-password
+```bash
+yarn add generate-password-lite
 ```
 
 ## Usage
@@ -71,7 +71,7 @@ yarn add js-generate-password
 For the password to be generated, **parameters** are able to pass as an optional **options** object.
 
 ```typescript
-import { GeneratePassword } from "js-generate-password";
+import { GeneratePassword } from "generate-password-lite";
 
 const password = GeneratePassword({
   length: 14,
@@ -115,14 +115,14 @@ Any of these can be passed into the options object for each function.
 | minLengthNumbers   | only if **numbers** is set to **true**, minLengthNumbers will create a password that will have minimum number of numbers in the password.                   | 1             |
 | minLengthSymbols   | only if **symbols** is set to **true**, minLengthSymbols will create a password that will have minimum number of symbols in the password.                   | 1             |
 
-* At least one should be true.
+- At least one should be true.
 
 ## Example
 
 - **No Options passed.**
 
 ```typescript
-const { GeneratePassword } = "js-generate-password";
+const { GeneratePassword } = "generate-password-lite";
 
 const password = GeneratePassword();
 
@@ -166,7 +166,6 @@ The generated password wouldn't has none of 'abc567XYZ' characters
 J9yCfttQNj;
 ```
 
-
 ## License
 
-js-generate-password is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadjoya/js-generate-password#readme) file for more details.
+generate-password-lite is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadjoya/generate-password-lite#readme) file for more details.

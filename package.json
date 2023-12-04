@@ -1,5 +1,5 @@
 {
-  "name": "js-generate-password",
+  "name": "generate-password-lite",
   "version": "1.0.0",
   "private": false,
   "description": "Password Generator for using in javascript/typescript based projects.",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmadjoya/js-generate-password.git"
+    "url": "git+https://github.com/ahmadjoya/generate-password-lite.git"
   },
   "keywords": [
     "generate password",
-    "js-generate-password",
+    "generate-password-lite",
     "password generator",
     "password generator",
     "random password generator",
@@ -30,9 +30,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahmadjoya/js-generate-password/issues"
+    "url": "https://github.com/ahmadjoya/generate-password-lite/issues"
   },
-  "homepage": "https://github.com/ahmadjoya/js-generate-password#readme",
+  "homepage": "https://github.com/ahmadjoya/generate-password-lite#readme",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
