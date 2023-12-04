@@ -12,4 +12,4 @@ rollup.config.mjs
 .prettierrc
 .editorconfig
 .babelrc
-package-lock.json
+yarn.lock
