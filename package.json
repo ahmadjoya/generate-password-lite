@@ -1,6 +1,6 @@
 {
   "name": "generate-password-lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "Password Generator for using in javascript/typescript based projects.",
   "Author": "Ahmad Joya <joya.abn@gmail.com>",
