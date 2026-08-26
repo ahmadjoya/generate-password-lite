@@ -1,6 +1,14 @@
-import { GenerateOptions } from '../types'
+import { ResolvedOptions } from '../types'
 
-export const checkError = (options: GenerateOptions) => {
+const assertCount = (value: number, name: string) => {
+  if (!Number.isInteger(value) || value < 0) {
+    throw new Error(
+      `generate-password-lite: \`${name}\` must be a non-negative integer, received ${value}.`
+    )
+  }
+}
+
+export const checkError = (options: ResolvedOptions) => {
   const {
     length,
     lowercase,
@@ -13,30 +21,32 @@ export const checkError = (options: GenerateOptions) => {
     minLengthSymbols,
   } = options
 
-  //Checking if the sum of minimum characters of Lowercase, uppercase, numbers and special case is greater than the total password length.
-  if (
-    minLengthLowercase! +
-      minLengthUppercase! +
-      minLengthNumbers! +
-      minLengthSymbols! >
-    length!
-  ) {
+  if (!Number.isInteger(length) || length < 1) {
     throw new Error(
-      'Sum of Minimum Characters in the passwords greater than the length of the Password to be generated.'
+      `generate-password-lite: \`length\` must be a positive integer, received ${length}.`
     )
   }
 
-  //Checking if lowercase, uppercase , numbers and special characters have all been set to false.
-  if (
-    lowercase == false &&
-    uppercase == false &&
-    numbers == false &&
-    symbols == false
-  ) {
+  assertCount(minLengthLowercase, 'minLengthLowercase')
+  assertCount(minLengthUppercase, 'minLengthUppercase')
+  assertCount(minLengthNumbers, 'minLengthNumbers')
+  assertCount(minLengthSymbols, 'minLengthSymbols')
+
+  // Lowercase, uppercase, numbers and symbols have all been turned off, so
+  // there is no character class left to build a password from.
+  if (!lowercase && !uppercase && !numbers && !symbols) {
     throw new Error(
-      'Alphabets, Numbers and Symbols are all set to False. No valid Characters to generate the Password.'
+      'generate-password-lite: `lowercase`, `uppercase`, `numbers` and `symbols` are all false. No valid characters to generate the password from.'
+    )
+  }
+
+  // The guaranteed characters alone would already overflow the password.
+  const minimumTotal =
+    minLengthLowercase + minLengthUppercase + minLengthNumbers + minLengthSymbols
+
+  if (minimumTotal > length) {
+    throw new Error(
+      `generate-password-lite: the sum of the minimum character counts (${minimumTotal}) is greater than \`length\` (${length}).`
     )
   }
 }
-
-// module.exports = checkError;
