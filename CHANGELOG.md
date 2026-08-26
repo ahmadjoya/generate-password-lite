@@ -4,6 +4,14 @@ All notable changes to this project are documented in this file.
 
 This library is published under two names — [`generate-password-lite`](https://www.npmjs.com/package/generate-password-lite) and [`js-generate-password`](https://www.npmjs.com/package/js-generate-password). Both ship identical code and share this changelog.
 
+## [1.1.1] - 2026-08-26
+
+### Changed
+
+- The published package contains built code only again. 1.1.0 also shipped `src/` and sourcemaps, which together made up more than half of it — 67.0 kB unpacked against 15.4 kB for 1.0.2. Dropping both brings it back to 31.8 kB (7.1 kB packed). The sourcemaps pointed at `src`, so they were of no use to anyone who had not also installed the sources.
+
+No functional changes. 1.1.0 and 1.1.1 behave identically.
+
 ## [1.1.0] - 2026-08-26
 
 ### Security
