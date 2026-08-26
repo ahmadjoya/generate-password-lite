@@ -1,61 +1,34 @@
-import { GenerateOptions } from '../types'
+import { GenerateOptions, ResolvedOptions } from '../types'
 
-export const processOption = (options: GenerateOptions) => {
-  {
-    options.length = typeof options.length == 'undefined' ? 10 : options.length
+const withDefault = <T>(value: T | undefined, fallback: T): T =>
+  typeof value === 'undefined' ? fallback : value
 
-    options.lowercase =
-      typeof options.lowercase == 'undefined' ? true : options.lowercase
+/**
+ * Fills in every unset option. Returns a new object so that the caller's
+ * options are never mutated.
+ */
+export const processOption = (options: GenerateOptions): ResolvedOptions => {
+  const lowercase = withDefault(options.lowercase, true)
+  const uppercase = withDefault(options.uppercase, true)
+  const numbers = withDefault(options.numbers, true)
+  const symbols = withDefault(options.symbols, false)
 
-    options.uppercase =
-      typeof options.uppercase == 'undefined' ? true : options.uppercase
-
-    options.numbers =
-      typeof options.numbers == 'undefined' ? true : options.numbers
-
-    options.symbols =
-      typeof options.symbols == 'undefined' ? false : options.symbols
-
-    if (options.lowercase) {
-      options.minLengthLowercase =
-        typeof options.minLengthLowercase == 'undefined'
-          ? 1
-          : options.minLengthLowercase
-    } else {
-      options.minLengthLowercase = 0
-    }
-
-    if (options.uppercase) {
-      options.minLengthUppercase =
-        typeof options.minLengthUppercase == 'undefined'
-          ? 1
-          : options.minLengthUppercase
-    } else {
-      options.minLengthUppercase = 0
-    }
-
-    if (options.numbers) {
-      options.minLengthNumbers =
-        typeof options.minLengthNumbers == 'undefined'
-          ? 1
-          : options.minLengthNumbers
-    } else {
-      options.minLengthNumbers = 0
-    }
-
-    if (options.symbols) {
-      options.minLengthSymbols =
-        typeof options.minLengthSymbols == 'undefined'
-          ? 1
-          : options.minLengthSymbols
-    } else {
-      options.minLengthSymbols = 0
-    }
-
-    options.exclude =
-      typeof options.exclude == 'undefined' ? '' : options.exclude
+  // A disabled character class can never contribute a minimum, regardless of
+  // what the caller passed in.
+  return {
+    length: withDefault(options.length, 10),
+    lowercase,
+    uppercase,
+    numbers,
+    symbols,
+    exclude: withDefault(options.exclude, ''),
+    minLengthLowercase: lowercase
+      ? withDefault(options.minLengthLowercase, 1)
+      : 0,
+    minLengthUppercase: uppercase
+      ? withDefault(options.minLengthUppercase, 1)
+      : 0,
+    minLengthNumbers: numbers ? withDefault(options.minLengthNumbers, 1) : 0,
+    minLengthSymbols: symbols ? withDefault(options.minLengthSymbols, 1) : 0,
   }
-  return options
 }
-
-// module.exports = processOption;
