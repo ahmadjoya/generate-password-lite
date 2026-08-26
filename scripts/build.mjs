@@ -19,13 +19,15 @@ const banner = `/**
 await rm(dist, { recursive: true, force: true })
 await mkdir(dist, { recursive: true })
 
+// The published package ships built code only. Sourcemaps would point at
+// `src`, which is not published, so they would resolve to nothing.
 const shared = {
   entryPoints: [entry],
   bundle: true,
   platform: 'neutral',
   target: ['es2022', 'node18'],
   minify: false,
-  sourcemap: true,
+  sourcemap: false,
   banner: { js: banner },
   legalComments: 'inline',
 }

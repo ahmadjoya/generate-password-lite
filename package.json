@@ -1,6 +1,6 @@
 {
   "name": "generate-password-lite",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "Tiny, dependency-free, cryptographically secure password generator for JavaScript and TypeScript projects.",
   "author": "Ahmad Joya <joya.abn@gmail.com>",
@@ -24,8 +24,7 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=18"
